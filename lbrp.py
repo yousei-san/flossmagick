@@ -60,19 +60,19 @@ def water(floor,height,width):
 def air(floor,height,width):
         waitforpress()
         for x in range(30):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+x,height/2-30),(width/2+x,height/2-30),2)
+            pygame.draw.line(floor,pygame.Color(152, 213, 251, 1),(width/2+x,height/2-5),(width/2+x,height/2-5),2)
             pygame.display.update()
         waitforpress()
         for x in range(30):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+x/2,height/2+x/2-30),(width/2+x/2,height/2+x/2-30),2)
+            pygame.draw.line(floor,pygame.Color(152, 213, 251, 1),(width/2+x/2,height/2-x/2-5),(width/2+x/2,height/2-x/2-5),2)
             pygame.display.update()
         waitforpress()
         for x in range(30):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+15+x/2,height/2+15-x/2-30),(width/2+15+x/2,height/2+15-x/2-30),2)
+            pygame.draw.line(floor,pygame.Color(152, 213, 251, 1),(width/2+30-x/2,(height/2)-x/2-5),(width/2+30-x/2,(height/2)-x/2-5),2)
             pygame.display.update()
         waitforpress()
         for x in range(26):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+2+x,height/2+7-30),(width/2+7+x,height/2+7-30),2)
+            pygame.draw.line(floor,pygame.Color(152, 213, 251, 1),(width/2+2+x,height/2+7-20),(width/2+7+x,height/2+7-20),2)
             pygame.display.update()
         return
 
