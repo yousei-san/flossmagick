@@ -16,9 +16,11 @@ def waitforpress():
          if wait.type == KEYDOWN and wait.key != K_q or wait.type == MOUSEBUTTONDOWN:
              boolean = False
          elif wait.type == QUIT:
+             pygame.display.quit()
              pygame.quit()
              sys.exit(0)
          elif wait.type == KEYDOWN and wait.key == K_q:
+             pygame.display.quit()
              pygame.quit()
              sys.exit(0)
     return
