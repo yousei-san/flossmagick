@@ -79,19 +79,15 @@ def air(floor,height,width):
 def fire(floor,height,width):
         waitforpress()
         for x in range(30):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+x,height/2),(width/2+x,height/2),2)
+            pygame.draw.line(floor,pygame.Color(204, 0, 0, 1),(width/2+30+x,height/2-5),(width/2+30+x,height/2-5),2)
             pygame.display.update()
         waitforpress()
         for x in range(30):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+x/2,height/2+x/2),(width/2+x/2,height/2+x/2),2)
+            pygame.draw.line(floor,pygame.Color(204, 0, 0, 1),(width/2+30+x/2,height/2-x/2-5),(width/2+30+x/2,height/2-x/2-5),2)
             pygame.display.update()
         waitforpress()
         for x in range(30):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+15+x/2,height/2+15-x/2),(width/2+15+x/2,height/2+15-x/2),2)
-            pygame.display.update()
-        waitforpress()
-        for x in range(26):
-            pygame.draw.line(floor,pygame.Color(76,175,80,1),(width/2+2+x,height/2+7),(width/2+7+x,height/2+7),2)
+            pygame.draw.line(floor,pygame.Color(204, 0, 0, 1),(width/2+60-x/2,height/2-x/2-5),(width/2+60-x/2,height/2-x/2-5),2)
             pygame.display.update()
         return
 
@@ -108,6 +104,7 @@ def main():
     edraw = True
     wdraw = True
     adraw = True
+    fdraw = True
     running = True
     while running:
         #clock.tick(5)
@@ -122,6 +119,10 @@ def main():
         waitforpress()
         if adraw:
             air(floor,height,width)
+        waitforpress()
+        if fdraw:
+            fire(floor,height,width)
+        fdraw = False
         waitforpress()
         #floor.blit(background, (0, 0))
         pygame.display.update()
